@@ -5,7 +5,7 @@ function Card(props) {
     <div className="bg-white rounded-lg p-4 shadow-lg max-w-sm">
       <div className="flex items-center">
         <img className="w-14" src={props.asset.image} alt="brand"></img>
-        <div className="ml-6 text-red-500 text-lg font-semibold">{props.asset.name}</div>
+        <div className="ml-6 text-red-500 text-lg font-semibold">{props.asset.name} {props.asset.version}</div>
       </div>
       <hr className="border-gray-400 border-1 mt-4" />
       <div className="text-gray-400 text-xs mt-2 font-medium">Updated 5hrs ago</div>
