@@ -1,0 +1,173 @@
+{
+    "assets": [{
+            "name": "TensorFlow",
+            "version": "1.0",
+            "image": "./images/tf_logo.png",
+            "description": "TensorFlow is a free and open-source software library for machine learning. It can be used across a range of tasks but has a particular focus on training and inference of deep neural networks. Tensorflow is a symbolic math library based on dataflow and differentiable programming.",
+            "techlogies": [{
+                    "name": "Container",
+                    "url": ""
+                },
+                {
+                    "name": "x86-64",
+                    "url": ""
+                },
+                {
+                    "name": "Databases",
+                    "url": ""
+                },
+                {
+                    "name": "Linux",
+                    "url": ""
+                },
+                {
+                    "name": "Docker",
+                    "url": ""
+                },
+                {
+                    "name": "AMI",
+                    "url": ""
+                }
+            ]
+        }, {
+            "name": "TensorFlow",
+            "version": "2.0",
+            "image": "./images/tf_logo.png",
+            "description": "TensorFlow is a free and open-source software library for machine learning. It can be used across a range of tasks but has a particular focus on training and inference of deep neural networks. Tensorflow is a symbolic math library based on dataflow and differentiable programming.",
+            "techlogies": [{
+                    "name": "Container",
+                    "url": ""
+                },
+                {
+                    "name": "x86",
+                    "url": ""
+                },
+                {
+                    "name": "Azure VM",
+                    "url": ""
+                },
+                {
+                    "name": "Linux",
+                    "url": ""
+                },
+                {
+                    "name": "Programming Languages",
+                    "url": ""
+                }
+            ]
+        },
+        {
+            "name": "PyTorch",
+            "version": "2.0",
+            "image": "./images/pytorch-logo.png",
+            "description": "PyTorch is an open source machine learning library based on the Torch library, used for applications such as computer vision and natural language processing, primarily developed by Facebook's AI Research lab. It is free and open-source software released under the Modified BSD license.",
+            "techlogies": [{
+                    "name": "mips64le",
+                    "url": ""
+                },
+                {
+                    "name": "x86-64",
+                    "url": ""
+                },
+                {
+                    "name": "Official Image",
+                    "url": ""
+                },
+                {
+                    "name": "ARM",
+                    "url": ""
+                },
+                {
+                    "name": "PowerPC 64 LE",
+                    "url": ""
+                }
+            ]
+        },
+        {
+            "name": "scikit-learn",
+            "version": "1.0",
+            "image": "./images/scikit_learn_logo.png",
+            "description": "Scikit-learn is a free software machine learning library for the Python programming language. It features various classification, regression and clustering algorithms including support vector machines.",
+            "techlogies": [{
+                    "name": "Container",
+                    "url": ""
+                },
+                {
+                    "name": "x86-64",
+                    "url": ""
+                },
+                {
+                    "name": "Databases",
+                    "url": ""
+                },
+                {
+                    "name": "Linux",
+                    "url": ""
+                },
+                {
+                    "name": "Docker",
+                    "url": ""
+                },
+                {
+                    "name": "Azure VM",
+                    "url": ""
+                }
+            ]
+        },
+        {
+            "name": "Keras",
+            "version": "2.0",
+            "image": "'/images/keras_logo.png",
+            "description": "Keras is an open-source software library that provides a Python interface for artificial neural networks. Keras acts as an interface for the TensorFlow library. Up until version 2.3, Keras supported multiple backends, including TensorFlow, Microsoft Cognitive Toolkit, Theano, and PlaidML.",
+            "techlogies": [{
+                    "name": "Container",
+                    "url": ""
+                },
+                {
+                    "name": "x86-64",
+                    "url": ""
+                },
+                {
+                    "name": "Databases",
+                    "url": ""
+                },
+                {
+                    "name": "Linux",
+                    "url": ""
+                },
+                {
+                    "name": "PowerPC 64 LE",
+                    "url": ""
+                }
+            ]
+        },
+        {
+            "name": "scikit-learn",
+            "version": "2.0",
+            "image": "./images/scikit_learn_logo.png",
+            "description": "Scikit-learn is a free software machine learning library for the Python programming language. It features various classification, regression and clustering algorithms including support vector machines.",
+            "techlogies": [{
+                    "name": "mips64le",
+                    "url": ""
+                },
+                {
+                    "name": "x86-64",
+                    "url": ""
+                },
+                {
+                    "name": "Official Image",
+                    "url": ""
+                },
+                {
+                    "name": "ARM",
+                    "url": ""
+                },
+                {
+                    "name": "PowerPC 64 LE",
+                    "url": ""
+                }
+            ]
+        }
+
+    ]
+}
