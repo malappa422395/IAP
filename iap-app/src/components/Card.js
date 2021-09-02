@@ -1,7 +1,6 @@
 import kerasImage from './../images/keras_logo.png';
 
 function Card(props) {
-  console.log(props)
   return (
     <div className="bg-white rounded-lg p-4 shadow-lg max-w-sm">
       <div className="flex items-center">
@@ -17,11 +16,11 @@ function Card(props) {
         {props.asset.techlogies.map((tech,index)=>{
             if(props.asset.techlogies.length === 5 && index === 4){
               return(
-                <span key={index} className="bg-gray-200 px-5 py-1 rounded-md text-xs text-gray-500 font-semibold text-center col-span-2">{tech.name}</span>
+                <span key={index} className="bg-gray-200 py-1 rounded-md text-xs text-gray-500 font-semibold text-center col-span-2">{tech.name}</span>
               )
             }
             return(
-              <span key={index} className="bg-gray-200 px-5 py-1 rounded-md text-xs text-gray-500 font-semibold text-center">{tech.name}</span>
+              <span key={index} className="bg-gray-200 py-1 rounded-md text-xs text-gray-500 font-semibold text-center">{tech.name}</span>
             )
         })}
       </div>
