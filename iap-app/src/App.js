@@ -13,7 +13,7 @@ function App() {
         </div>
         <div>
           <Header />
-          <div className="grid gap-4 grid-cols-3 p-8">
+          <div className="grid gap-4 md:grid-cols-3 sm:grid-cols-1 p-8">
             {
               data && data.assets && data.assets.map((asset,index)=> {
                   return  <Card key={index} asset={asset} />
