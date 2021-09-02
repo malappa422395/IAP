@@ -2,7 +2,8 @@
     "assets": [{
             "name": "TensorFlow",
             "version": "1.0",
-            "image": "./../images/tf_logo.png",
+            "image": "images/tf_logo.png", 
+            "updated": "2",
             "description": "TensorFlow is a free and open-source software library for machine learning. It can be used across a range of tasks but has a particular focus on training and inference of deep neural networks. Tensorflow is a symbolic math library based on dataflow and differentiable programming.",
             "techlogies": [{
                     "name": "Container",
@@ -32,7 +33,8 @@
         }, {
             "name": "TensorFlow",
             "version": "2.0",
-            "image": "./images/tf_logo.png",
+            "image": "images/tf_logo.png",
+            "updated": "5",
             "description": "TensorFlow is a free and open-source software library for machine learning. It can be used across a range of tasks but has a particular focus on training and inference of deep neural networks. Tensorflow is a symbolic math library based on dataflow and differentiable programming.",
             "techlogies": [{
                     "name": "Container",
@@ -58,8 +60,9 @@
         },
         {
             "name": "PyTorch",
-            "version": "2.0",
-            "image": "./images/pytorch-logo.png",
+            "version": "",
+            "image": "images/pytorch-logo.png",
+            "updated": "4",
             "description": "PyTorch is an open source machine learning library based on the Torch library, used for applications such as computer vision and natural language processing, primarily developed by Facebook's AI Research lab. It is free and open-source software released under the Modified BSD license.",
             "techlogies": [{
                     "name": "mips64le",
@@ -86,7 +89,8 @@
         {
             "name": "scikit-learn",
             "version": "1.0",
-            "image": "./images/scikit_learn_logo.png",
+            "image": "images/scikit_learn_logo.png",
+            "updated": "4",
             "description": "Scikit-learn is a free software machine learning library for the Python programming language. It features various classification, regression and clustering algorithms including support vector machines.",
             "techlogies": [{
                     "name": "Container",
@@ -116,8 +120,8 @@
         },
         {
             "name": "Keras",
-            "version": "2.0",
-            "image": "'/images/keras_logo.png",
+            "version": "",
+            "image": "images/keras_logo.png",
             "description": "Keras is an open-source software library that provides a Python interface for artificial neural networks. Keras acts as an interface for the TensorFlow library. Up until version 2.3, Keras supported multiple backends, including TensorFlow, Microsoft Cognitive Toolkit, Theano, and PlaidML.",
             "techlogies": [{
                     "name": "Container",
@@ -144,7 +148,8 @@
         {
             "name": "scikit-learn",
             "version": "2.0",
-            "image": "./images/scikit_learn_logo.png",
+            "image": "images/scikit_learn_logo.png",
+            "updated": "3",
             "description": "Scikit-learn is a free software machine learning library for the Python programming language. It features various classification, regression and clustering algorithms including support vector machines.",
             "techlogies": [{
                     "name": "mips64le",

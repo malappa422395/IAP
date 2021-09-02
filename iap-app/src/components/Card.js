@@ -1,14 +1,14 @@
-import kerasImage from './../images/keras_logo.png';
+import './card.css'
 
 function Card(props) {
   return (
     <div className="bg-white rounded-lg p-4 shadow-lg max-w-sm">
       <div className="flex items-center">
-        <img className="w-14" src={props.asset.image} alt="brand"></img>
+        <img className="icon" src={props.asset.image} alt="brand"></img>
         <div className="ml-6 text-red-500 text-lg font-semibold">{props.asset.name} {props.asset.version}</div>
       </div>
       <hr className="border-gray-400 border-1 mt-4" />
-      <div className="text-gray-400 text-xs mt-2 font-medium">Updated 5hrs ago</div>
+      <div className="text-gray-400 text-xs mt-2 font-medium">Updated {props.asset.updated}hrs ago</div>
       <p className="mt-3 text-sm font-semibold mb-3 text-gray-600 overflow-ellipsis overflow-hidden h-16">{props.asset.description}</p>
       <hr className="border-gray-400 border-1 mb-4" />
      
