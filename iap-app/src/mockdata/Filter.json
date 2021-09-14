@@ -1,0 +1,43 @@
+{
+    "Filters": [{
+            "Type": "Operating Systems",
+            "list": [
+                "CentOS",
+                "Ubuntu",
+                "Debian"
+            ]
+        },
+        {
+            "Type": "Python",
+            "list": [
+                "3.6",
+                "3.7"
+            ]
+        },
+        {
+            "Type": "Architectures",
+            "list": [
+                "x86",
+                "x86_64"
+            ]
+        },
+        {
+            "Type": "Frameworks",
+            "list": [
+                "TensorFlow",
+                "PyTorch",
+                "Scikit-learn",
+                "Keras"
+            ]
+        },
+        {
+            "Type": "Image Formats",
+            "list": [
+                "Docker",
+                "AMI",
+                "Azure VM",
+                "VirtualBox"
+            ]
+        }
+    ]
+}
