@@ -1,10 +1,11 @@
+import React, { useState, useEffect } from 'react';
 import Card from './components/Card';
 import Header from './components/Header';
 import ActionMenu from './components/ActionMenu';
 import Filter from './components/Filter';
+import Flow from './components/Flow';
 import data from './mockdata/homepage.json';
 import './App.css';
-import React, { useState, useEffect } from 'react';
 
 
 function App() {
@@ -57,6 +58,7 @@ function App() {
             })
           }
         </div>
+        <Flow />
       </div>
     </div>
 

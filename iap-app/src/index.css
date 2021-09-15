@@ -3,6 +3,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .nodeFlow{
+    @apply bg-white rounded-lg text-sm py-2 px-6 border-t border-r border-l border-gray-300 flex items-center
+  }
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
