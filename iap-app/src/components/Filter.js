@@ -4,7 +4,7 @@ import filterData from './../mockdata/Filter.json';
 function Filter(props) {
 
     return (
-        <div className="overflow-y-scroll max-h-screen">
+        <div className="overflow-y-auto max-h-screen">
             <div key="Filters" className="ml-10 mr-5 mb-20">
                 {filterData.Filters.map((data, index) => {
                     return (

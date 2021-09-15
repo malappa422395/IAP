@@ -3,10 +3,15 @@ module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        sidebarDark: '#1D2B35'
+      },
+    },
   },
   variants: {
     extend: {},
   },
   plugins: [],
+  
 }
