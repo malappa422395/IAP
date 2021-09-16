@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function BreadCrum() {
+export default function BreadCrumb() {
     return (
         <div style={{display:'flex'}}>
             <div style={{color:"rgb(221 53 53)", fontWeight:"700"}}>Home</div>
