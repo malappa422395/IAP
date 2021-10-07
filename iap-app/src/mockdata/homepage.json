@@ -1,10 +1,10 @@
 {
     "assets": [{
-            "name": "TensorFlow",
-            "version": "1.0",
+            "name": "PK-Score",
+            "version": "",
             "image": "images/tf_logo.png", 
             "updated": "2",
-            "description": "TensorFlow is a free and open-source software library for machine learning. It can be used across a range of tasks but has a particular focus on training and inference of deep neural networks. Tensorflow is a symbolic math library based on dataflow and differentiable programming.",
+            "description": "DevOps Assessment.",
             "techlogies": [{
                     "name": "Container",
                     "url": ""
@@ -31,11 +31,11 @@
                 }
             ]
         }, {
-            "name": "TensorFlow",
-            "version": "2.0",
+            "name": "One-Click Kubernetes Deployment",
+            "version": "",
             "image": "images/tf_logo.png",
             "updated": "5",
-            "description": "TensorFlow is a free and open-source software library for machine learning. It can be used across a range of tasks but has a particular focus on training and inference of deep neural networks. Tensorflow is a symbolic math library based on dataflow and differentiable programming.",
+            "description": "Build Kubernetes cluster on Public Cloud.",
             "techlogies": [{
                     "name": "Container",
                     "url": ""
@@ -59,11 +59,11 @@
             ]
         },
         {
-            "name": "PyTorch",
+            "name": "Service Mesh POV for Kubernetes",
             "version": "",
             "image": "images/pytorch-logo.png",
             "updated": "4",
-            "description": "PyTorch is an open source machine learning library based on the Torch library, used for applications such as computer vision and natural language processing, primarily developed by Facebook's AI Research lab. It is free and open-source software released under the Modified BSD license.",
+            "description": "Provides Comparison and PK recommendation for ServiceMesh on Kubernetes.",
             "techlogies": [{
                     "name": "mips64le",
                     "url": ""
