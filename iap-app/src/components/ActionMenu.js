@@ -3,7 +3,7 @@ function ActionMenu(props) {
    return (
     <div className="ml-8 mt-4 flex justify-between pr-8">
         <div>
-            <div className="text-sm font-semibold">1 - 25 of 3,447,001 available images.</div>
+            <div className="text-sm font-semibold">1 - 2 of 3 available images.</div>
             <div className="flex mt-4">
                 {
                     props.selectedFilterData.map((filter) => {

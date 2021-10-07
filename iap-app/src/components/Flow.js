@@ -77,7 +77,7 @@ const onLoad = (reactFlowInstance) =>
 const Flow = () => {
   const [elements] = useState(initialElements);
   return (
-      <div style={{height: 300}}>
+      <div style={{height: "100vh", padding:"1em"}}>
         <ReactFlow
             elements={elements}
             nodesConnectable={false}
