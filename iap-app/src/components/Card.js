@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 function Card(props) {
   const history = useHistory();
   const openProduct = () => {
-    history.push('/product')
+    history.push('/product/'+props.asset.assetid)
   }
   return (
     <div onClick={()=> openProduct()} className="bg-white rounded-lg p-4 shadow-lg max-w-sm cursor-pointer">

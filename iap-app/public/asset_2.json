@@ -1,0 +1,8 @@
+{
+    "name":"One-Click Kubernetes Deployment",
+    "title": "prokarma.com",
+    "label": "OneClick - Login",
+    "url":"https://master.prince.prokarma.com/login",
+    "description":"It currently supports EKS, AKS and GKE.",
+    "explanation": "The UI will provide a way to create a Template and uses Terraform life cycle to install configure the cluster."
+}
