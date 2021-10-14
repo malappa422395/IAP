@@ -6,7 +6,7 @@
             "updated": "2",
             "description": "DevOps Assessment.",
             "techlogies": [{
-                    "name": "Container",
+                    "name": "DevOps",
                     "url": ""
                 },
                 {
@@ -14,19 +14,7 @@
                     "url": ""
                 },
                 {
-                    "name": "Databases",
-                    "url": ""
-                },
-                {
-                    "name": "Linux",
-                    "url": ""
-                },
-                {
-                    "name": "Docker",
-                    "url": ""
-                },
-                {
-                    "name": "AMI",
+                    "name": "assessment",
                     "url": ""
                 }
             ]
@@ -37,23 +25,15 @@
             "updated": "5",
             "description": "Build Kubernetes cluster on Public Cloud.",
             "techlogies": [{
-                    "name": "Container",
+                    "name": "Kubernetes",
                     "url": ""
                 },
                 {
-                    "name": "x86",
+                    "name": "Cloud",
                     "url": ""
                 },
                 {
-                    "name": "Azure VM",
-                    "url": ""
-                },
-                {
-                    "name": "Linux",
-                    "url": ""
-                },
-                {
-                    "name": "Programming Languages",
+                    "name": "Deployment",
                     "url": ""
                 }
             ]
@@ -65,23 +45,11 @@
             "updated": "4",
             "description": "Provides Comparison and PK recommendation for ServiceMesh on Kubernetes.",
             "techlogies": [{
-                    "name": "mips64le",
+                    "name": "Service Mesh",
                     "url": ""
                 },
                 {
-                    "name": "x86-64",
-                    "url": ""
-                },
-                {
-                    "name": "Official Image",
-                    "url": ""
-                },
-                {
-                    "name": "ARM",
-                    "url": ""
-                },
-                {
-                    "name": "PowerPC 64 LE",
+                    "name": "Kubernetes",
                     "url": ""
                 }
             ]

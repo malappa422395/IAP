@@ -4,6 +4,7 @@ import Filter from './Filter';
 
 function Sidebar() {
     const location = useLocation();
+    
 
     const [selectedFilterData, updateSelectedFilterData] = useState([]);
     const sendDataToParent = (data, event) => {
@@ -17,6 +18,7 @@ function Sidebar() {
         }
         updateSelectedFilterData(selectedFilterData);
         console.log("selectedFilterData", selectedFilterData)
+
     };
 
     useEffect(() => {

@@ -7,7 +7,7 @@ function Card(props) {
   }
   return (
     <div onClick={()=> openProduct()} className="bg-white rounded-lg p-4 shadow-lg max-w-sm cursor-pointer">
-      <div className="flex items-center">
+      <div className="flex items-center h-16">
         <img className="object-cover h-12" src={props.asset.image} alt="brand"></img>
         <div className="ml-6 text-red-500 text-lg font-semibold">{props.asset.name} {props.asset.version}</div>
       </div>
