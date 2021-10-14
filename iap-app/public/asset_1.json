@@ -1,8 +1,18 @@
 {
+    "assetid": 1,
     "name":"PK-Score",
     "title": "prokarma.com",
     "label": "p-Score",
     "url":"https://worker2.prince.prokarma.com/home",
     "description": "It measures the details based on DORA recommended practise.",
-    "explanation": "Access the maturity of current DevOps tools and provides a Radar graph of current score with the industry standard."
+    "explanation": "Access the maturity of current DevOps tools and provides a Radar graph of current score with the industry standard.",
+    "techlogies": [{
+        "name": "DevOps",
+        "url": ""
+    },
+    {
+        "name": "assessment",
+        "url": ""
+    }
+]
 }

@@ -1,8 +1,18 @@
 {
+    "assetid": 3,
     "name":"Service Mesh POV for Kubernetes",
     "title": "sharepoint.com", 
     "label": "ServiceMesh",
     "url": "https://prokarma001-my.sharepoint.com/:w:/g/personal/jvenkatakrishnan_pkglobal_com/EeBYckyP1eVGpJMi6Di3AVwBKExwzN1Z_JwsFZjDp4FosA?e=4%3AE8mh3U&at=9",
     "description":"The document compares Linkerd and Istio and keeps the rest of vendors discussion out of the document.",
-    "explanation": "The Document provides overview of service mesh on  Kubernetes and also lists both the pro’s and Con’s with PK point of view."
+    "explanation": "The Document provides overview of service mesh on  Kubernetes and also lists both the pro’s and Con’s with PK point of view.",
+    "techlogies": [{
+        "name": "Service Mesh",
+        "url": ""
+    },
+    {
+        "name": "Kubernetes",
+        "url": ""
+    }
+    ]
 }
