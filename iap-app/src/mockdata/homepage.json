@@ -1,5 +1,6 @@
 {
     "assets": [{
+            "assetid": 1,
             "name": "PK-Score",
             "version": "",
             "image": "images/tf_logo.png", 
@@ -15,6 +16,7 @@
                 }
             ]
         }, {
+            "assetid": 2,
             "name": "One-Click Kubernetes Deployment",
             "version": "",
             "image": "images/tf_logo.png",
@@ -35,6 +37,7 @@
             ]
         },
         {
+            "assetid": 3,
             "name": "Service Mesh POV for Kubernetes",
             "version": "",
             "image": "images/pytorch-logo.png",
