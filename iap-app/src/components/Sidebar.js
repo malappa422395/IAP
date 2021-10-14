@@ -27,7 +27,7 @@ function Sidebar() {
     }, [selectedFilterData]);
     return (
         location.pathname === "/home" || location.pathname === "/" ? (
-        <div className="flex flex-col w-64 fixed top-14 h-screen overflow-hidden bg-sidebarDark border-t-2 border-red-700" >
+        <div className="flex flex-col w-64 fixed top-16 h-screen overflow-hidden bg-sidebarDark border-t-1 border-red-700" >
             <div>
                 <Filter key="filter" getCheckedFilter={sendDataToParent}></Filter>
             </div>

@@ -6,7 +6,7 @@ function Product() {
     return (
         <div>
             <TensorFlow/>
-            <Flow />
+            {/* <Flow /> */}
         </div>
     );
 }
