@@ -10,7 +10,7 @@ export const searchFilter = (data) => (dispatch) => {
     if(data.length > 0){
         products = products.filter((asset, index) => {
             let formattedAssetName = asset.name.replace(/[^\w\s]/gi, '');
-            if (formattedAssetName.toLowerCase().indexOf(data.toLowerCase()) > -1)
+            if (formattedAssetName.toLowerCase().indexOf(data.toLowerCase()) > -1 || asset.description.toLowerCase().indexOf(data.toLowerCase()) > -1)
             {
                 return true
             }
@@ -19,6 +19,7 @@ export const searchFilter = (data) => (dispatch) => {
                     tagFound[index] = true;
                 }
             })
+            console.log(asset)
             if(tagFound[index]){
                 return true
             }
