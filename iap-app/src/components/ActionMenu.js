@@ -1,10 +1,25 @@
+import { connect } from 'react-redux';
+import { useDispatch } from "react-redux";
+import PropTypes from 'prop-types';
+
+import { searchFilter } from '../redux/actions/userActions';
+
+import data from './../mockdata/homepage.json';
+
 function ActionMenu(props) {
-    // console.log("props", props)
-   return (
-    <div className="ml-8 mt-4 flex justify-between pr-8">
+    const dispatch = useDispatch();
+    let assetsLength = data.assets.length;
+    const handleSearch = (event) => {
+        dispatch(searchFilter(event.target.value))
+    }
+    return (
+    <div className="ml-8 mt-4 flex items-center justify-between pr-8">
+        <div class="shadow flex w-full" >
+            <input class="w-full rounded p-2" type="text" placeholder="Search..." onChange={handleSearch}/>
+        </div>
         <div>
-            <div className="text-sm font-semibold">1 - 2 of 3 available images.</div>
-            <div className="flex mt-4">
+            <div className="text-sm font-semibold w-max ml-5">{props.user.data.length} of {assetsLength} available Assets.</div>
+            <div className="flex">
                 {
                     props.selectedFilterData.map((filter) => {
                         return (
@@ -37,9 +52,20 @@ function ActionMenu(props) {
 
             </div>
         </div> */}
-       
+        
     </div>
-  );
+    );
 }
 
-export default ActionMenu;
+
+ActionMenu.propTypes = {
+    searchFilter: PropTypes.func.isRequired,
+}
+const mapStateToProps = (state) => ({
+   user: state.user,
+});
+const mapActionsToProps = {
+    searchFilter
+}
+
+export default connect(mapStateToProps, mapActionsToProps)(ActionMenu);
