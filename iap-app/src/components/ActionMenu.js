@@ -1,5 +1,5 @@
 function ActionMenu(props) {
-    console.log("props", props)
+    // console.log("props", props)
    return (
     <div className="ml-8 mt-4 flex justify-between pr-8">
         <div>

@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { useDispatch } from "react-redux";
 import Filter from './Filter';
+import { searchFilterArray } from '../redux/actions/userActions';
+
 
 function Sidebar() {
     const location = useLocation();
-    
+    const dispatch = useDispatch();
 
     const [selectedFilterData, updateSelectedFilterData] = useState([]);
     const sendDataToParent = (data, event) => {
@@ -17,7 +22,9 @@ function Sidebar() {
         }
         }
         updateSelectedFilterData(selectedFilterData);
-        console.log("selectedFilterData", selectedFilterData)
+
+        dispatch(searchFilterArray(selectedFilterData))
+        // console.log("selectedFilterData", selectedFilterData)
 
     };
 
@@ -35,4 +42,15 @@ function Sidebar() {
     );
 }
 
-export default Sidebar;
+
+Sidebar.propTypes = {
+    searchFilterArray: PropTypes.func.isRequired,
+}
+const mapStateToProps = (state) => ({
+   user: state.user,
+});
+const mapActionsToProps = {
+    searchFilterArray
+}
+
+export default connect(mapStateToProps, mapActionsToProps)(Sidebar);

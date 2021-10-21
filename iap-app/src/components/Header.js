@@ -1,10 +1,19 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
-// import DP from 'images/dp.jpg';
+import { connect } from 'react-redux';
+import { searchFilter } from '../redux/actions/userActions';
 
+// import DP from 'images/dp.jpg';
 function Header() {
     const history = useHistory();
+    const dispatch = useDispatch();
     const redirectToHome = () => {
         history.push('/')
+    }
+    const handleSearch = (event) => {
+        dispatch(searchFilter(event.target.value))
     }
     return (
         <div className='flex w-full border-b fixed z-10 h-16 header-bg'>
@@ -26,7 +35,12 @@ function Header() {
                     <path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd" />
                 </svg>
             </span> */}
-            <input className="w-full header-bg text-white placeholder-white px-4 outline-none" type="text" placeholder="Welcome to PK Digital Engineering Asset Portal" />
+            <input 
+                className="w-full header-bg text-white placeholder-white px-4 outline-none" 
+                type="text" 
+                placeholder="Welcome to PK Digital Engineering Asset Portal" 
+                onChange={handleSearch}
+                />
             {/* <button className="hover:bg-gray-200 bg-gray-100 text-white px-4 border-l border-r">
                 <div className="bg-gray-400 w-6 h-6 text-sm rounded-full grid place-items-center">
                     ?
@@ -45,4 +59,15 @@ function Header() {
     );
 }
 
-export default Header;
+
+Header.propTypes = {
+    searchFilter: PropTypes.func.isRequired,
+}
+const mapStateToProps = (state) => ({
+   user: state.user,
+});
+const mapActionsToProps = {
+    searchFilter
+}
+
+export default connect(mapStateToProps, mapActionsToProps)(Header);

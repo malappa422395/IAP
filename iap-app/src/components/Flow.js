@@ -85,7 +85,6 @@ const Flow = () => {
             paneMoveable={false}
             nodeTypes={nodeTypes}
             nodesDraggable={false}
-            nodesConnectable={false}
             zoomOnDoubleClick={false}
             onLoad={onLoad}
             className="validationflow"
