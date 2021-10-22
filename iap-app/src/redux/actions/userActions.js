@@ -18,6 +18,7 @@ export const searchFilter = (data) => (dispatch) => {
                 if(tag.name.toLowerCase().indexOf(data.toLowerCase()) > -1){
                     tagFound[index] = true;
                 }
+                return tag;
             })
             console.log(asset)
             if(tagFound[index]){
@@ -45,7 +46,9 @@ export const searchFilterArray = (data) => (dispatch) => {
                     if(tag.name.toLowerCase().indexOf(value.toLowerCase()) > -1){
                         tagFound[index] = true;
                     }
+                    return value
                 })
+                return tag;
             })
             if(tagFound[index]){
                 return true
