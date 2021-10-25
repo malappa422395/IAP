@@ -190,7 +190,7 @@ function ProductGridView(props) {
             dataLength={props.user.data.length}
             next={fetchMoreData}
             hasMore={true}
-            loader={
+            loader={isLoader &&
                 (<div className="overlay">
                     <div className="loader"></div>
                 </div>)}
