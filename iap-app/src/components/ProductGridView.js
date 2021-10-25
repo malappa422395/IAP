@@ -181,7 +181,7 @@ function ProductGridView(props) {
             ]
             setUserDataProps(props.user.data.push(...temArray))
             setIsLoader(false);
-            //dispatch(searchFilterArray(props.user.data))
+            dispatch(searchFilterArray([]))
         }, 500);
     };
 

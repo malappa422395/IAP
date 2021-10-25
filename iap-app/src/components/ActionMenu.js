@@ -2,13 +2,13 @@ import { connect } from 'react-redux';
 import { useDispatch } from "react-redux";
 import PropTypes from 'prop-types';
 
-import { searchFilter } from '../redux/actions/userActions';
+import { searchFilter, getAssets } from '../redux/actions/userActions';
 
-import data from './../mockdata/homepage.json';
+// import data from './../mockdata/homepage.json';
 
 function ActionMenu(props) {
     const dispatch = useDispatch();
-    let assetsLength = data.assets.length;
+    let assetsLength = getAssets() ; //data.assets.length;
     const handleSearch = (event) => {
         dispatch(searchFilter(event.target.value))
     }

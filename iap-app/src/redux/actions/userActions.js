@@ -4,9 +4,11 @@ import {
 import mainData from './../../mockdata/homepage.json';
 
 let products = mainData.assets.slice();
+let assets = [];
 
 export const searchFilter = (data) => (dispatch) => {
     let tagFound = [];
+    assets = products;
     if(data.length > 0){
         products = products.filter((asset, index) => {
             let formattedAssetName = asset.name.replace(/[^\w\s]/gi, '');
@@ -28,7 +30,7 @@ export const searchFilter = (data) => (dispatch) => {
             return false
         })
     }
-    if(data.length === 0) {
+    if(data.length === 0 && products.length ===0) {
         products = mainData.assets.slice();
     }
     dispatch({
@@ -39,6 +41,7 @@ export const searchFilter = (data) => (dispatch) => {
 
 export const searchFilterArray = (data) => (dispatch) => {
     let tagFound = [];
+    assets = products;
     if(data.length > 0){
         products = products?.filter((asset, index) => {
             asset?.techlogies?.map((tag) => {
@@ -56,7 +59,7 @@ export const searchFilterArray = (data) => (dispatch) => {
             return false
         })
     }
-    if(data.length === 0) {
+    if(data.length === 0 && products.length ===0) {
         products = mainData.assets.slice();
     }
     dispatch({
@@ -64,3 +67,11 @@ export const searchFilterArray = (data) => (dispatch) => {
         payload: products
     })
 }
+
+export const getAssets = () =>{
+    return assets.length || 0;
+}
+
+// export const setAssets = (products)=>{
+//   assets = products;
+// }
