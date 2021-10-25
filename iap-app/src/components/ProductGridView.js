@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from "react-redux";
 import { connect } from 'react-redux';
-import { searchFilter } from '../redux/actions/userActions';
+import { searchFilter, searchFilterArray } from '../redux/actions/userActions';
 import Card from './Card';
 import InfiniteScroll from "react-infinite-scroll-component";
 
@@ -67,6 +67,42 @@ function ProductGridView(props) {
                 {
                     "name": "Deployment " + randomNameGenerator(9),
                     "url": ""
+                },
+                {
+                    "name": "Kubernetes " + randomNameGenerator(9),
+                    "url": ""
+                },
+                {
+                    "name": "Cloud " + randomNameGenerator(9),
+                    "url": ""
+                },
+                {
+                    "name": "Deployment " + randomNameGenerator(9),
+                    "url": ""
+                },
+                {
+                    "name": "Kubernetes " + randomNameGenerator(9),
+                    "url": ""
+                },
+                {
+                    "name": "Cloud " + randomNameGenerator(9),
+                    "url": ""
+                },
+                {
+                    "name": "Deployment " + randomNameGenerator(9),
+                    "url": ""
+                },
+                {
+                    "name": "Kubernetes " + randomNameGenerator(9),
+                    "url": ""
+                },
+                {
+                    "name": "Cloud " + randomNameGenerator(9),
+                    "url": ""
+                },
+                {
+                    "name": "Deployment " + randomNameGenerator(9),
+                    "url": ""
                 }
                 ]
             },
@@ -86,11 +122,67 @@ function ProductGridView(props) {
                     "url": ""
                 }
                 ]
+            },
+            {
+                "assetid": randomNameGenerator(11),
+                "name": "PK-score " + randomNameGenerator(11),
+                "version": "",
+                "image": "images/tf_logo.png",
+                "updated": "2",
+                "description": "DevOps Assessment.",
+                "techlogies": [{
+                    "name": "DevOps " + randomNameGenerator(11),
+                    "url": ""
+                },
+                {
+                    "name": "assessment " + randomNameGenerator(11),
+                    "url": ""
+                }
+                ]
+            },
+            {
+                "assetid": randomNameGenerator(12),
+                "name": "One-Click Kubernetes Deployment " + randomNameGenerator(12),
+                "version": "",
+                "image": "images/tf_logo.png",
+                "updated": "5",
+                "description": "Build Kubernetes cluster on Public Cloud.",
+                "techlogies": [{
+                    "name": "Kubernetes " + randomNameGenerator(12),
+                    "url": ""
+                },
+                {
+                    "name": "Cloud " + randomNameGenerator(12),
+                    "url": ""
+                },
+                {
+                    "name": "Deployment " + randomNameGenerator(12),
+                    "url": ""
+                }
+                ]
+            },
+            {
+                "assetid": randomNameGenerator(13),
+                "name": "Service Mesh POV for Kubernetes " + randomNameGenerator(13),
+                "version": "",
+                "image": "images/pytorch-logo.png",
+                "updated": "4",
+                "description": "Provides Comparison and PK recommendation for ServiceMesh on Kubernetes.",
+                "techlogies": [{
+                    "name": "Service Mesh " + randomNameGenerator(13),
+                    "url": ""
+                },
+                {
+                    "name": "Kubernetes " + randomNameGenerator(13),
+                    "url": ""
+                }
+                ]
             }
             ]
             setUserDataProps(props.user.data.push(...temArray))
-            setIsLoader(false)
-        }, 1500);
+            setIsLoader(false);
+            //dispatch(searchFilterArray(props.user.data))
+        }, 500);
     };
 
     return (
@@ -98,7 +190,7 @@ function ProductGridView(props) {
             dataLength={props.user.data.length}
             next={fetchMoreData}
             hasMore={true}
-            loader={isLoader &&
+            loader={
                 (<div className="overlay">
                     <div className="loader"></div>
                 </div>)}
