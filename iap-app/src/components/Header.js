@@ -37,9 +37,9 @@ function Header() {
                 </div>
             </button> */}
             <div className="flex header-bg items-center pl-4">
-                <div className="h-8 w-8 rounded-full ">
+                {/* <div className="h-8 w-8 rounded-full ">
                     <img className="w-8 h-8 rounded-full object-cover max-w-none " src={'images/dp.jpg'} alt="display" />
-                </div>
+                </div> */}
                 {/* <div className="text-sm font-semibold text-white ml-4 mr-2 whitespace-nowrap">Sandeep Siddam</div>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M7 9.5L12 14.5L17 9.5H7Z" fill="white" fillOpacity="1"/>
