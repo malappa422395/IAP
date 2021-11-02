@@ -6,6 +6,7 @@ import Product from './pages/product';
 import Header from './components/Header';
 import PageNotFound from './pages/pageNotFound';
 import store from './redux/store';
+import AddNewAsset from './components/AddNewAsset'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
                 <Route exact path="/" component={Home}></Route>
                 <Route exact path="/home" component={Home}></Route>
                 <Route exact path="/product/:assetid" component={Product}></Route>
+                <Route exact path="/addasset" component={AddNewAsset}></Route>
                 <Route component={PageNotFound} />
             </Switch>
           </div>

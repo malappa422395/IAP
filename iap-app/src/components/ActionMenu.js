@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import { useDispatch } from "react-redux";
 import PropTypes from 'prop-types';
+import { useHistory } from "react-router-dom";
 
 import { searchFilter, getAssets } from '../redux/actions/userActions';
 
@@ -12,13 +13,18 @@ function ActionMenu(props) {
     const handleSearch = (event) => {
         dispatch(searchFilter(event.target.value))
     }
+    const history = useHistory();
+    const openAddAssetPage = () => {
+        history.push('/addasset')
+    }
     return (
-    <div className="ml-8 mt-4 flex items-center justify-between pr-8">
+    <div className="ml-8 mt-4 flex items-center justify-between">
         <div className="shadow flex w-full" >
             <input className="w-full rounded p-2 px-4 text-lg font-medium" type="text" placeholder="Search..." onChange={handleSearch}/>
         </div>
         <div>
-            <div className="text-sm font-semibold w-max ml-5">{props.user.data.length} of {assetsLength} available Assets.</div>
+            <div className="text-sm font-semibold w-max ml-2 ml-2">{props.user.data.length} of {assetsLength} available Assets.</div>
+            
             <div className="flex">
                 {
                     props.selectedFilterData.map((filter) => {
@@ -33,6 +39,11 @@ function ActionMenu(props) {
                 
             </div>
         </div>
+            <div className="m-1">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" onClick={()=>{openAddAssetPage()}}>
+                    Add
+                </button>
+            </div>
         {/* <div className="flex items-center">
             <svg className="mr-4" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="8" height="8" rx="2" fill="#DA0000"/>
