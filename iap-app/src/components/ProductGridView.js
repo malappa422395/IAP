@@ -2,19 +2,20 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from "react-redux";
 import { connect } from 'react-redux';
-import { searchFilter, searchFilterArray } from '../redux/actions/userActions';
+import { searchFilter, searchFilterArray, setAssets } from '../redux/actions/userActions';
 import Card from './Card';
 import InfiniteScroll from "react-infinite-scroll-component";
+import mainData from './../mockdata/homepage.json';
+
 
 
 
 function ProductGridView(props) {
     const dispatch = useDispatch();
-    const [userDataProps, setUserDataProps] = useState(props);
     const [isLoader, setIsLoader] = useState(false);
 
     useEffect(() => {
-        dispatch(searchFilter(""));
+        dispatch(setAssets(mainData.assets.slice(), "initial"));
     }, [dispatch]);
 
 
@@ -179,15 +180,13 @@ function ProductGridView(props) {
                 ]
             }
             ]
-            setUserDataProps(props.user.data.push(...temArray))
             setIsLoader(false);
-            dispatch(searchFilterArray([]))
+            dispatch(setAssets(temArray, "normal"));
         }, 500);
     };
-
     return (
         <InfiniteScroll
-            dataLength={props.user.data.length}
+            dataLength={props.user.allAssets.length}
             next={fetchMoreData}
             hasMore={true}
             loader={isLoader &&
@@ -211,13 +210,15 @@ function ProductGridView(props) {
 }
 ProductGridView.propTypes = {
     searchFilter: PropTypes.func.isRequired,
+    setAssets: PropTypes.func.isRequired,
 }
 const mapStateToProps = (state) => ({
     user: state.user,
 });
 
 const mapActionsToProps = {
-    searchFilter
+    searchFilter,
+    setAssets
 }
 
 export default connect(mapStateToProps, mapActionsToProps)(ProductGridView);

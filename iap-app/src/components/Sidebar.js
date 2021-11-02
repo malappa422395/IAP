@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 import { useDispatch } from "react-redux";
 import Filter from './Filter';
 import { searchFilterArray } from '../redux/actions/userActions';
-import './sidebar.css'
 
 function Sidebar() {
     const location = useLocation();
@@ -14,18 +13,15 @@ function Sidebar() {
     const [selectedFilterData, updateSelectedFilterData] = useState([]);
     const sendDataToParent = (data, event) => {
         if (selectedFilterData.indexOf(data) === -1 && event.target.checked) {
-        selectedFilterData.push(data);
+            selectedFilterData.push(data);
         } else if (!event.target.checked) {
-        const index = selectedFilterData.indexOf(data);
-        if (index > -1) {
-            selectedFilterData.splice(index, 1);
-        }
+            const index = selectedFilterData.indexOf(data);
+            if (index > -1) {
+                selectedFilterData.splice(index, 1);
+            }
         }
         updateSelectedFilterData(selectedFilterData);
-
         dispatch(searchFilterArray(selectedFilterData))
-        // console.log("selectedFilterData", selectedFilterData)
-
     };
 
     useEffect(() => {

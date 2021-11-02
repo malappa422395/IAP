@@ -1,16 +1,38 @@
 import { 
     SET_SEARCH_FILTER, 
+    SET_ASSETS
 } from '../types';
-import mainData from './../../mockdata/homepage.json';
+import store from '../store';
 
-let products = mainData.assets.slice();
-let assets = [];
+export const setAssets = (assetsData, type)=> (dispatch) => {
+    if(type === "initial"){
+        dispatch({
+            type: SET_ASSETS,
+            payload: assetsData
+        })
+        dispatch({
+            type: SET_SEARCH_FILTER,
+            payload: assetsData
+        })
+    }
+    if(type === "normal"){
+        dispatch({
+            type: SET_ASSETS,
+            payload: assetsData
+        })
+        dispatch({
+            type: SET_SEARCH_FILTER,
+            payload: store.getState().user.allAssets
+        })
+    }
+}
+
 
 export const searchFilter = (data) => (dispatch) => {
     let tagFound = [];
-    assets = products;
+    let products = [];
     if(data.length > 0){
-        products = mainData.assets.slice();
+        products = store.getState().user.allAssets;
         products = products.filter((asset, index) => {
             let formattedAssetName = asset.name.replace(/[^\w\s]/gi, '');
             if (formattedAssetName?.toLowerCase().indexOf(data?.toLowerCase()) > -1 || asset.description.toLowerCase().indexOf(data.toLowerCase()) > -1)
@@ -23,7 +45,6 @@ export const searchFilter = (data) => (dispatch) => {
                 }
                 return tag;
             })
-            console.log(asset)
             if(tagFound[index]){
                 return true
             }
@@ -32,7 +53,7 @@ export const searchFilter = (data) => (dispatch) => {
         })
     }
     if(data.length === 0 && products.length ===0) {
-        products = mainData.assets.slice();
+        products = store.getState().user.allAssets;
     }
     dispatch({
         type: SET_SEARCH_FILTER,
@@ -42,9 +63,9 @@ export const searchFilter = (data) => (dispatch) => {
 
 export const searchFilterArray = (data) => (dispatch) => {
     let tagFound = [];
-    assets = products;
+    let products;
     if(data.length > 0){
-        products = mainData.assets.slice();
+        products = store.getState().user.allAssets;
         products = products?.filter((asset, index) => {
             asset?.techlogies?.map((tag) => {
                 data?.map((value) => {
@@ -62,7 +83,7 @@ export const searchFilterArray = (data) => (dispatch) => {
         })
     }
     if(data.length === 0) {
-        products = mainData.assets.slice();
+        products = store.getState().user.allAssets;
     }
     dispatch({
         type: SET_SEARCH_FILTER,
@@ -71,9 +92,5 @@ export const searchFilterArray = (data) => (dispatch) => {
 }
 
 export const getAssets = () =>{
-    return mainData.assets.slice().length;
+    return store.getState().user.allAssets.length
 }
-
-// export const setAssets = (products)=>{
-//   assets = products;
-// }

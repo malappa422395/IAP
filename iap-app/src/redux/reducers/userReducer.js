@@ -1,9 +1,11 @@
 import {
     SET_SEARCH_FILTER,
+    SET_ASSETS
 } from '../types';
   
   const initialState = {
-    data: []
+    data: [],
+    allAssets: []
   };
   
   export default function userReducer(state = initialState, action) {
@@ -13,6 +15,11 @@ import {
           ...state,
           data: action.payload
         };
+      case SET_ASSETS:
+          return {
+            ...state,
+            allAssets: [...state.allAssets, ...action.payload]
+          };
       default:
         return state;
     }
