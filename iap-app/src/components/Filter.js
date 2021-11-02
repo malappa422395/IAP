@@ -6,11 +6,11 @@ function Filter(props) {
     return (
         <div className="overflow-y-auto max-h-screen">
             <div key="Filters" className="ml-10 mr-5 mb-20 cursor-pointer">
-                {filterData.Filters.map((data, index) => {
+                {filterData?.Filters?.map((data, index) => {
                     return (
                         <div key={data.Type} className="mt-3">
                             <div className="text-white mb-2">{data.Type}</div>
-                            {data.list.map(data => {
+                            {data?.list?.sort()?.map(data => {
                                 return (
                                     <div key={data}>
                                         <label className="inline-flex items-center cursor-pointer" onChange={props.getCheckedFilter.bind(this,data)}>
