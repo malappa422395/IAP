@@ -15,7 +15,7 @@ function ActionMenu(props) {
     return (
     <div className="ml-8 mt-4 flex items-center justify-between pr-8">
         <div className="shadow flex w-full" >
-            <input className="w-full rounded p-2" type="text" placeholder="Search..." onChange={handleSearch}/>
+            <input className="w-full rounded p-2 px-4 text-lg font-medium" type="text" placeholder="Search..." onChange={handleSearch}/>
         </div>
         <div>
             <div className="text-sm font-semibold w-max ml-5">{props.user.data.length} of {assetsLength} available Assets.</div>

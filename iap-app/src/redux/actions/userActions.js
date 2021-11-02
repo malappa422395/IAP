@@ -10,6 +10,7 @@ export const searchFilter = (data) => (dispatch) => {
     let tagFound = [];
     assets = products;
     if(data.length > 0){
+        products = mainData.assets.slice();
         products = products.filter((asset, index) => {
             let formattedAssetName = asset.name.replace(/[^\w\s]/gi, '');
             if (formattedAssetName?.toLowerCase().indexOf(data?.toLowerCase()) > -1 || asset.description.toLowerCase().indexOf(data.toLowerCase()) > -1)
@@ -43,6 +44,7 @@ export const searchFilterArray = (data) => (dispatch) => {
     let tagFound = [];
     assets = products;
     if(data.length > 0){
+        products = mainData.assets.slice();
         products = products?.filter((asset, index) => {
             asset?.techlogies?.map((tag) => {
                 data?.map((value) => {
@@ -59,7 +61,7 @@ export const searchFilterArray = (data) => (dispatch) => {
             return false
         })
     }
-    if(data.length === 0 && products.length ===0) {
+    if(data.length === 0) {
         products = mainData.assets.slice();
     }
     dispatch({
@@ -69,7 +71,7 @@ export const searchFilterArray = (data) => (dispatch) => {
 }
 
 export const getAssets = () =>{
-    return assets.length || 0;
+    return mainData.assets.slice().length;
 }
 
 // export const setAssets = (products)=>{
